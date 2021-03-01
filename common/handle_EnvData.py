@@ -1,17 +1,8 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/24 21:19
-# @Author  : chron
-# @FileName: handle_EnvData.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
-
-"""
-可以设置动态属性(环境变量)，做接口流程
-"""
+"""关联接口"""
 
 
 class EnvData(object):
-    pass
+    data = 1
 
 
 def clear_data():

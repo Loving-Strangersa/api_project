@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2021/1/24 0:01
-# @Author  : chron
-# @FileName: handle_data.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
-"""
-替换Excel数据
-"""
 import json
 import re
 from common.handle_config import conf
 from common.handle_EnvData import EnvData
+
+"""替换Excel数据"""
 
 
 def replace_mark_with_data(case, mark, read_data):
@@ -34,18 +28,15 @@ def replace_by_data(data):
     :param data:字符串
     :return:替换之后的字符串
     """
-    res = re.findall("#(.*?)#", data)  # 如果没有找到返回空列表
-
-    # 标识符对应值来自:1、环境变量 2、配置文件
+    res = re.findall("#(.*?)#", data)
     if res:
         for item in res:
-            # 得到标识符对应值
             try:
                 vaule = conf.get('data', item)
-            except:
+            except BaseException:
                 try:
                     vaule = getattr(EnvData, item)
-                except:
+                except BaseException:
                     continue
             # 替换原字符
             data = data.replace("#{}#".format(item), vaule)
@@ -58,18 +49,9 @@ def replace_case(case):
     :param case:
     :return:
     """
-    # 把case字典从Excel中读出一条用例，json对象
     case_str = json.dumps(case)
-    # 替换
     new_case = replace_by_data(case_str)
-    # 把字符串转为字典
     case_dict = json.loads(new_case)
     return case_dict
 
 
-if __name__ == '__main__':
-    # a = replace_mark_with_data({'1':'#phone#'},'#phone#','1234')
-    # print(a)
-
-    print('123hhh'.replace('1', '呀'))
-    print(replace_case({'msg':100}))

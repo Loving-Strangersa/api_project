@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/19 21:30
-# @Author  : chron
-# @FileName: project_path.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
-
 import os
 import time
 
@@ -12,10 +5,10 @@ import time
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # 配置文件路径
-CONFIG_DIR = os.path.join(BASE_DIR, 'config')
+CONFIG_DIR = os.path.join(BASE_DIR,"config.ini")
 
 # Excel存放路径
-DATA_DIR = os.path.join(BASE_DIR, 'case_data')
+DATA_DIR = os.path.join(BASE_DIR, 'case_data',"api_cases.xlsx")
 
 # 测试报告输出路径
 REPORTS_DIR = os.path.join(BASE_DIR, 'outputs\\report')

@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/22 0:14
-# @Author  : chron
-# @FileName: handle_phone.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
 import random
 from common.handle_db import HandleDB
 

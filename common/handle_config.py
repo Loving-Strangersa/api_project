@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2021/1/17 18:30
-# @Author  : chron
-# @FileName: handle_config.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
-
 from configparser import ConfigParser
 from common.project_path import CONFIG_DIR
 
@@ -19,7 +13,7 @@ class Config(ConfigParser):
         self.read(file_path, encoding="utf8")
 
 
-conf = Config(file_path=CONFIG_DIR + "/config.ini")
+conf = Config(file_path=CONFIG_DIR)
 
 if __name__ == "__main__":
     a = conf.get("log", "name")

@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/17 17:21
-# @Author  : chron
-# @FileName: my_logger.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
-
-
 import logging
 import os
 from common.handle_config import conf
@@ -16,11 +8,9 @@ class MyLogger(logging.Logger):
 
     def __init__(self, file=None):
         """
-        :param name: 日志文件名称
-        :param level: 日志收集等级
         :param file:是否生成本地文件
         """
-        # 初始化日志收集器名字、输出级别
+        # 初始化父类日志收集器名字、输出级别
         super().__init__(conf.get('log', 'name'), conf.get('log', 'level'))
 
         # 日志格式 日期、收集器名字、模块名、行数、输出日志级别、信息

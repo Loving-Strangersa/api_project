@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/18 23:30
-# @Author  : chron
-# @FileName: handle_request.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
 import json
 import requests
 from common.handle_logger import logger
@@ -27,7 +21,6 @@ def __hand_header(token):
 
     header = {'User-Agent': ua}
     if token:
-        # 修改头部的token"token"的key，token的value
         header['token'] = '{}'.format(token)
         return header
     return header

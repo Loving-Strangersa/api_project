@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2021/1/21 14:42
-# @Author  : chron
-# @FileName: handle_db.py
-# @Software: PyCharm
-# @E-mail  : chron@foxmil.com
+import pymysql
+from common.handle_config import conf
 
 """
 1、连接数据库
@@ -12,15 +8,11 @@
 4、关闭数据库连接
 """
 
-import pymysql
-from common.handle_config import conf
-
 
 class HandleDB(object):
 
     def __init__(self):
-        # 初始化数据库连接
-        self.comnn = pymysql.connect(
+        self.connect = pymysql.connect(
             host=conf.get("mysql", "host"),
             port=conf.getint("mysql", "port"),
             user=conf.get("mysql", "user"),
@@ -30,7 +22,7 @@ class HandleDB(object):
         )
 
         # 创建游标，返回字典数据
-        self.cur = self.comnn.cursor(pymysql.cursors.DictCursor)
+        self.cur = self.connect.cursor(pymysql.cursors.DictCursor)
 
     def get_one_data(self, sql):
         """
@@ -38,7 +30,7 @@ class HandleDB(object):
         :return:获取一条数据
         """
         # 更新事务保持数据的一致性
-        self.comnn.commit()
+        self.connect.commit()
         # 执行sql
         sql = str(sql)
         self.cur.execute(sql)
@@ -47,18 +39,18 @@ class HandleDB(object):
     def get_all_data(self, sql):
         """
         :param sql:sql语句
-        :return:获取所有数据
+        :return:获取所有数据 [{},{}...]
         """
-        self.comnn.commit()
+        self.connect.commit()
         self.cur.execute(sql)
         return self.cur.fetchall()
 
     def get_sql(self, sql):
         """
         :param sql:
-        :return:获取sql执行结果
+        :return:返回sql查询成功的记录数目
         """
-        self.comnn.commit()
+        self.connect.commit()
         return self.cur.execute(sql)
 
     def updata(self, sql):
@@ -67,17 +59,22 @@ class HandleDB(object):
         :param sql:
         :return:
         """
-        self.comnn.commit()
+        self.connect.commit()
         self.cur.execute(sql)
-        self.comnn.commit()
+        self.connect.commit()
 
     def close(self):
         self.cur.close()
-        self.comnn.close()
+        self.connect.close()
 
 
 if __name__ == '__main__':
     s = HandleDB()
+    a = s.get_all_data("select name from help_category;")
+    print(a)
+
+
+
     # s = s.get_sql("select * from member limit 3 ")
     # print('获取sql查询结果条数:{}'.format(s))
     # s = s.get_one_data("select * from member ")
