@@ -14,4 +14,4 @@ s = unittest.TestLoader().discover(TEST_CASES_DIR)
 
 # 生成报告
 br = BeautifulReport(s)
-br.report('test', TIME + 'report.html', REPORTS_DIR)
+br.report('test', TIME + '_report.html', REPORTS_DIR)
