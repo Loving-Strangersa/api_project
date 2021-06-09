@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e299c453-bc0d-4064-acfd-ca9c929a1413" name="默认的" comment="更新代码风格">
-      <change afterPath="$PROJECT_DIR$/demo/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_EnvData.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_EnvData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_phone.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_phone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/headle_read_yaml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/project_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/project_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="e299c453-bc0d-4064-acfd-ca9c929a1413" name="默认的" comment="优化一些细节" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614574242035</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="优化一些细节">
+      <created>1623251528218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623251528218</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -295,7 +285,8 @@
     <MESSAGE value="updata" />
     <MESSAGE value="第二次提交" />
     <MESSAGE value="更新代码风格" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新代码风格" />
+    <MESSAGE value="优化一些细节" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化一些细节" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
