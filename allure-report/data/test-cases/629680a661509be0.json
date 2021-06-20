@@ -1,0 +1,153 @@
+{
+  "uid" : "629680a661509be0",
+  "name" : "test_play[case1]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "9ac44b3fb195a2ae7e88e08d908faa98",
+  "time" : {
+    "start" : 1624174709800,
+    "stop" : 1624174709849,
+    "duration" : 49
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1624174709618,
+      "stop" : 1624174709618,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ae31880883e8f385",
+      "name" : "请求地址",
+      "source" : "ae31880883e8f385.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "abbca7bf34ad85a0",
+      "name" : "请求头",
+      "source" : "abbca7bf34ad85a0.txt",
+      "type" : "text/plain",
+      "size" : 133
+    }, {
+      "uid" : "8e9bdb0c18f7f4e",
+      "name" : "请求方法",
+      "source" : "8e9bdb0c18f7f4e.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "4751b4162b282265",
+      "name" : "请求参数",
+      "source" : "4751b4162b282265.txt",
+      "type" : "text/plain",
+      "size" : 42
+    }, {
+      "uid" : "5e146e465ebd4b87",
+      "name" : "反回状态码",
+      "source" : "5e146e465ebd4b87.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "70b0a666771ee3b8",
+      "name" : "响应结果",
+      "source" : "70b0a666771ee3b8.txt",
+      "type" : "text/plain",
+      "size" : 597
+    }, {
+      "uid" : "d0b60332d087b582",
+      "name" : "第一次断言",
+      "source" : "d0b60332d087b582.txt",
+      "type" : "text/plain",
+      "size" : 8
+    }, {
+      "uid" : "8c78e63d5314d2f6",
+      "name" : "第二次断言",
+      "source" : "8c78e63d5314d2f6.txt",
+      "type" : "text/plain",
+      "size" : 10
+    }, {
+      "uid" : "592d3feacdc0ae65",
+      "name" : "第二次断言",
+      "source" : "592d3feacdc0ae65.txt",
+      "type" : "text/plain",
+      "size" : 14
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1624174710177,
+      "stop" : 1624174710178,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "请求播放地址"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-L7B50IS8"
+  }, {
+    "name" : "thread",
+    "value" : "13288-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 2, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=123456&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "629680a661509be0.json",
+  "parameterValues" : [ "{'id': 2, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=123456&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

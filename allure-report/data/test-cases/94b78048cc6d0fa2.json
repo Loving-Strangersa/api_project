@@ -1,0 +1,471 @@
+{
+  "uid" : "94b78048cc6d0fa2",
+  "name" : "test_play[case0]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "b6e9989b9d92c973d5c459eff82bdbfb",
+  "time" : {
+    "start" : 1624177527647,
+    "stop" : 1624177527839,
+    "duration" : 192
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1624177527646,
+      "stop" : 1624177527646,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6e774eba4c9f75cc",
+      "name" : "请求地址",
+      "source" : "6e774eba4c9f75cc.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "1689c9f43db07fd7",
+      "name" : "请求头",
+      "source" : "1689c9f43db07fd7.txt",
+      "type" : "text/plain",
+      "size" : 133
+    }, {
+      "uid" : "20635476bb13e7ea",
+      "name" : "请求方法",
+      "source" : "20635476bb13e7ea.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "413e4eef69e6e5e9",
+      "name" : "请求参数",
+      "source" : "413e4eef69e6e5e9.txt",
+      "type" : "text/plain",
+      "size" : 45
+    }, {
+      "uid" : "c492990ffaefe88d",
+      "name" : "反回状态码",
+      "source" : "c492990ffaefe88d.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "1927e94c3c66465e",
+      "name" : "响应结果",
+      "source" : "1927e94c3c66465e.txt",
+      "type" : "text/plain",
+      "size" : 5918
+    }, {
+      "uid" : "e341dd133c5cdc76",
+      "name" : "第一次断言",
+      "source" : "e341dd133c5cdc76.txt",
+      "type" : "text/plain",
+      "size" : 8
+    }, {
+      "uid" : "cbc7aa1e605fe4f0",
+      "name" : "第二次断言",
+      "source" : "cbc7aa1e605fe4f0.txt",
+      "type" : "text/plain",
+      "size" : 10
+    }, {
+      "uid" : "678b76c450bba423",
+      "name" : "第二次断言",
+      "source" : "678b76c450bba423.txt",
+      "type" : "text/plain",
+      "size" : 62
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1624177528230,
+      "stop" : 1624177528230,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "请求播放地址"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-L7B50IS8"
+  }, {
+    "name" : "thread",
+    "value" : "8764-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 1, 'title': '请求正常播放节目', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=661543514&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"200\",\\n    \"rid\": \"SUCCESS\",\\n    \"playCode\": \"100000\",\\n    \"respId\": \"3e1aa4cc336695e70ac4eb74907b2d35_eUmJPxTPjoilDrHQ0wRnMw==\",\\n    \"info\": null,\\n    \"message\": \"SUCCESS\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614146405554,\\n    \"body\": {\\n        \"content\": {\\n            \"contId\": \"661543514\",\\n            \"contName\": \"哥斯拉2：怪兽之王\",\\n            \"bcName\": \"咪咕视讯央视易橙联合运营\",\\n            \"prdPackageId\": \"1004641\",\\n            \"needAuth\": false,\\n            \"duration\": \"7897\",\\n            \"titleValue\": 0,\\n            \"endValue\": 0,\\n            \"productIds\": \"2028600496\",\\n            \"contentLevel\": \"\",\\n            \"vid\": null,\\n            \"cpName\": \"\",\\n            \"playerType\": null,\\n            \"assetId\": \"5102217994\",\\n            \"preRecord\": null,\\n            \"cutVideo\": \"1\",\\n            \"thumbViewer\": null,\\n            \"thumbViewerPath\": null,\\n            \"thumbViewerName\": null,\\n            \"hasAudio\": true,\\n            \"tip\": {\\n                \"code\": \"USE_TICKET\",\\n                \"msg\": \"用券\"\\n            },\\n            \"mmsId\": \"5500742150\",\\n            \"vrImageDistortion\": \"\",\\n            \"vrImageDepth\": \"\",\\n            \"serialContentId\": null,\\n            \"albumIDS\": \"\",\\n            \"progSnapshot\": \"\",\\n            \"miguPublish\": \"1\",\\n            \"chipMatch\": null,\\n            \"copyright\": {\\n                \"ncpid\": \"800033\",\\n                \"ncpcode\": null,\\n                \"copyRightObjectID\": \"100089684\",\\n                \"authorizationWay\": \"1\"\\n            },\\n            \"ottEnable\": \"1\",\\n            \"contentMediaType\": {\\n                \"isDrmContent\": false,\\n                \"isPekMultView\": false,\\n                \"isH265\": true,\\n                \"isMultiViewContent\": false,\\n                \"isDolbyContent\": true,\\n                \"isAdvance\": false,\\n                \"is120FPS\": false,\\n                \"is3D\": false,\\n                \"isVRContent\": false,\\n                \"ishx\": false,\\n                \"isSpecialBlest\": false\\n            },\\n            \"vrContentType\": null,\\n            \"dimension\": null,\\n            \"formatOf3D\": null,\\n            \"viewDegree\": null,\\n            \"copyRightObjectID\": \"100089684\",\\n            \"drm\": false\\n        },\\n        \"playBill\": null,\\n        \"auth\": {\\n            \"logined\": false,\\n            \"authResult\": \"FAIL\",\\n            \"resultDesc\": null,\\n            \"member\": null,\\n            \"benefites\": null,\\n            \"authPassDefinitionMap\": null\\n        },\\n        \"urlInfo\": {\\n            \"urlType\": \"trial\",\\n            \"url\": \"http://gslbmgspvod.miguvideo.com/depository_yqv/asset/zhengshi/5102/217/994/5102217994/media/5102217994_5009199724_570.mg001.mp4.m3u8?msisdn=202102241400050f1f7850ca764fd8ae371ff609c10773&mdspid=&spid=800033&netType=0&sid=5500742150&pid=2028600496&timestamp=20210224140005&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=661543514&ParentNodeID=-99&preview=1&playseek=000000-000600&assertID=5500742150&client_ip=221.181.101.37&SecurityKey=20210224140005&mvid=5102217994&mcid=1000&mpid=130000119466&playurlVersion=SJ-A1-0.0.3&userid=&jmhm=&videocodec=h265&encrypt=e08325256f7e7ecfbdd1115c4375c4e9\",\\n            \"mediaType\": \"10\",\\n            \"usageCode\": \"570\",\\n            \"codeRate\": \"800\",\\n            \"mediaSize\": 8868182592,\\n            \"rateDesc\": \"投电视专享（VIP限免）\",\\n            \"contId\": null,\\n            \"rateType\": \"8\",\\n            \"needClothHat\": true,\\n            \"resultCode\": \"200\",\\n            \"videoCoding\": \"h265\",\\n            \"hdCodeType\": \"2\",\\n            \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n            \"trySeeDuration\": \"360\",\\n            \"definitionRightSource\": null,\\n            \"authRightSource\": null,\\n            \"userDolbyPlay\": null,\\n            \"streamCode\": null,\\n            \"sdkPlay\": null,\\n            \"outPutFormat\": \"ts\",\\n            \"mediaHeight\": \"2160\",\\n            \"mediaWidth\": \"3840\",\\n            \"hdEquityInfo\": null\\n        },\\n        \"urlInfos\": [\\n            {\\n                \"urlType\": \"trial\",\\n                \"url\": \"http://gslbmgspvod.miguvideo.com/depository_yqv/asset/zhengshi/5102/217/994/5102217994/media/5102217994_5009199724_570.mg001.mp4.m3u8?msisdn=202102241400050f1f7850ca764fd8ae371ff609c10773&mdspid=&spid=800033&netType=0&sid=5500742150&pid=2028600496&timestamp=20210224140005&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=661543514&ParentNodeID=-99&preview=1&playseek=000000-000600&assertID=5500742150&client_ip=221.181.101.37&SecurityKey=20210224140005&mvid=5102217994&mcid=1000&mpid=130000119466&playurlVersion=SJ-A1-0.0.3&userid=&jmhm=&videocodec=h265&encrypt=e08325256f7e7ecfbdd1115c4375c4e9\",\\n                \"mediaType\": \"10\",\\n                \"usageCode\": \"570\",\\n                \"codeRate\": \"800\",\\n                \"mediaSize\": 8868182592,\\n                \"rateDesc\": \"投电视专享（VIP限免）\",\\n                \"contId\": null,\\n                \"rateType\": \"8\",\\n                \"needClothHat\": true,\\n                \"resultCode\": \"200\",\\n                \"videoCoding\": \"h265\",\\n                \"hdCodeType\": \"2\",\\n                \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n                \"trySeeDuration\": \"360\",\\n                \"definitionRightSource\": null,\\n                \"authRightSource\": null,\\n                \"userDolbyPlay\": null,\\n                \"streamCode\": null,\\n                \"sdkPlay\": null,\\n                \"outPutFormat\": \"ts\",\\n                \"mediaHeight\": \"2160\",\\n                \"mediaWidth\": \"3840\",\\n                \"hdEquityInfo\": null\\n            }\\n        ],\\n        \"mediaFiles\": [\\n            {\\n                \"usageCode\": \"455\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"80\",\\n                \"rateDesc\": \"高清 540P\",\\n                \"needAuth\": false,\\n                \"fileSize\": \"988947697\",\\n                \"rateType\": \"2\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"91\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"160\",\\n                \"rateDesc\": \"超清 720P\",\\n                \"needAuth\": false,\\n                \"fileSize\": \"1971195987\",\\n                \"rateType\": \"3\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"92\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"210\",\\n                \"rateDesc\": \"蓝光 1080P\",\\n                \"needAuth\": true,\\n                \"fileSize\": \"3930526042\",\\n                \"rateType\": \"4\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"570\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"800\",\\n                \"rateDesc\": \"投电视专享（VIP限免）\",\\n                \"needAuth\": true,\\n                \"fileSize\": \"8868182592\",\\n                \"rateType\": \"8\",\\n                \"videoCoding\": \"h265\",\\n                \"hdCodeType\": \"2\",\\n                \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            }\\n        ],\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": {},\\n        \"terminal\": {\\n            \"suitAvs2\": \"false\",\\n            \"suitAvs2Desc\": \"本节目采用全新avs2技术标准，部分机型若无法播放，请手动选择其他视频观看\",\\n            \"suitMultiView\": \"false\",\\n            \"suitMultiViewDesc\": \"本节目采用全新多视角技术，部分机型可能无法流畅播放，您可以观看其他精彩内容，敬请谅解\"\\n        },\\n        \"advertInfo\": {\\n            \"isAdvert\": \"3\",\\n            \"toast\": null,\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": null\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": {\\n            \"shortName\": \"-\"\\n        },\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a83dbe9b429cb083",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174709619,
+        "stop" : 1624174709797,
+        "duration" : 178
+      }
+    }, {
+      "uid" : "1d14d4d6e4d6d2b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174303066,
+        "stop" : 1624174303218,
+        "duration" : 152
+      }
+    }, {
+      "uid" : "ac9c4300f8a6bb04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174227035,
+        "stop" : 1624174227089,
+        "duration" : 54
+      }
+    }, {
+      "uid" : "d1479caa2efaf6fa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174197036,
+        "stop" : 1624174197195,
+        "duration" : 159
+      }
+    }, {
+      "uid" : "d23ab76c9fdb10cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623999606902,
+        "stop" : 1623999607062,
+        "duration" : 160
+      }
+    }, {
+      "uid" : "f159783b92eec3ca",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'bool'",
+      "time" : {
+        "start" : 1623999178256,
+        "stop" : 1623999178381,
+        "duration" : 125
+      }
+    }, {
+      "uid" : "886c452ad362065d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623998350562,
+        "stop" : 1623998350646,
+        "duration" : 84
+      }
+    }, {
+      "uid" : "e09279d1d46c1100",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623998195868,
+        "stop" : 1623998196039,
+        "duration" : 171
+      }
+    }, {
+      "uid" : "aea16da972cd77fa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997985763,
+        "stop" : 1623997985949,
+        "duration" : 186
+      }
+    }, {
+      "uid" : "2df3087fcffcd1d2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997388438,
+        "stop" : 1623997388577,
+        "duration" : 139
+      }
+    }, {
+      "uid" : "fc5f0ac6d5e910b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997133994,
+        "stop" : 1623997134310,
+        "duration" : 316
+      }
+    }, {
+      "uid" : "beafb236654e9386",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623996695248,
+        "stop" : 1623996695468,
+        "duration" : 220
+      }
+    }, {
+      "uid" : "9714affb7c5559db",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623927999747,
+        "stop" : 1623927999821,
+        "duration" : 74
+      }
+    }, {
+      "uid" : "e4f46cd9486db638",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623927870778,
+        "stop" : 1623927870915,
+        "duration" : 137
+      }
+    }, {
+      "uid" : "b9818c61b895c4d6",
+      "status" : "broken",
+      "statusDetails" : "TypeError: dumps() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given",
+      "time" : {
+        "start" : 1623927316804,
+        "stop" : 1623927316864,
+        "duration" : 60
+      }
+    }, {
+      "uid" : "e5ff8aad38b4e938",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623927184151,
+        "stop" : 1623927184217,
+        "duration" : 66
+      }
+    }, {
+      "uid" : "e7ee56ed3454ed",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623927070109,
+        "stop" : 1623927070378,
+        "duration" : 269
+      }
+    }, {
+      "uid" : "c1d4364f062096f7",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'dict' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623927044845,
+        "stop" : 1623927045005,
+        "duration" : 160
+      }
+    }, {
+      "uid" : "60900d155c7f2b03",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623926947769,
+        "stop" : 1623926947845,
+        "duration" : 76
+      }
+    }, {
+      "uid" : "561d1bfe83148dad",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'int' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623926883152,
+        "stop" : 1623926883216,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "d49f4bbd0dd5aae4",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926779960,
+        "stop" : 1623926780032,
+        "duration" : 72
+      }
+    }, {
+      "uid" : "a9a4f51f23294329",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926718399,
+        "stop" : 1623926718463,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "1ea73fa6f2d583ee",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926624474,
+        "stop" : 1623926624584,
+        "duration" : 110
+      }
+    }, {
+      "uid" : "b6387c37b2540f33",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926462928,
+        "stop" : 1623926462998,
+        "duration" : 70
+      }
+    }, {
+      "uid" : "8dda0fa7b7e9426a",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926334862,
+        "stop" : 1623926334863,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "9d1942db167056b6",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926279702,
+        "stop" : 1623926279704,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "ceb84fd2eb75573b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926253157,
+        "stop" : 1623926253158,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "aa1c02f6f1129699",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623926130511,
+        "stop" : 1623926130512,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "6ee4765aeb309c6e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925917554,
+        "stop" : 1623925917557,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "7d0e949ab565324b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925810588,
+        "stop" : 1623925810589,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "14362ef4c3017574",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925447465,
+        "stop" : 1623925447466,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "4e8b680a26c78a01",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925138201,
+        "stop" : 1623925138319,
+        "duration" : 118
+      }
+    }, {
+      "uid" : "e8e9422af2ff9082",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925049709,
+        "stop" : 1623925049710,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "2f2eb34c73f45453",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623924864886,
+        "stop" : 1623924864888,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "f5cc7c34cca68630",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623923652240,
+        "stop" : 1623923652422,
+        "duration" : 182
+      }
+    }, {
+      "uid" : "89f7f4a2bfe7309e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623920976897,
+        "stop" : 1623920977022,
+        "duration" : 125
+      }
+    }, {
+      "uid" : "c4d6920a97d71bf4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623919443717,
+        "stop" : 1623919443845,
+        "duration" : 128
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "94b78048cc6d0fa2.json",
+  "parameterValues" : [ "{'id': 1, 'title': '请求正常播放节目', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=661543514&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"200\",\\n    \"rid\": \"SUCCESS\",\\n    \"playCode\": \"100000\",\\n    \"respId\": \"3e1aa4cc336695e70ac4eb74907b2d35_eUmJPxTPjoilDrHQ0wRnMw==\",\\n    \"info\": null,\\n    \"message\": \"SUCCESS\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614146405554,\\n    \"body\": {\\n        \"content\": {\\n            \"contId\": \"661543514\",\\n            \"contName\": \"哥斯拉2：怪兽之王\",\\n            \"bcName\": \"咪咕视讯央视易橙联合运营\",\\n            \"prdPackageId\": \"1004641\",\\n            \"needAuth\": false,\\n            \"duration\": \"7897\",\\n            \"titleValue\": 0,\\n            \"endValue\": 0,\\n            \"productIds\": \"2028600496\",\\n            \"contentLevel\": \"\",\\n            \"vid\": null,\\n            \"cpName\": \"\",\\n            \"playerType\": null,\\n            \"assetId\": \"5102217994\",\\n            \"preRecord\": null,\\n            \"cutVideo\": \"1\",\\n            \"thumbViewer\": null,\\n            \"thumbViewerPath\": null,\\n            \"thumbViewerName\": null,\\n            \"hasAudio\": true,\\n            \"tip\": {\\n                \"code\": \"USE_TICKET\",\\n                \"msg\": \"用券\"\\n            },\\n            \"mmsId\": \"5500742150\",\\n            \"vrImageDistortion\": \"\",\\n            \"vrImageDepth\": \"\",\\n            \"serialContentId\": null,\\n            \"albumIDS\": \"\",\\n            \"progSnapshot\": \"\",\\n            \"miguPublish\": \"1\",\\n            \"chipMatch\": null,\\n            \"copyright\": {\\n                \"ncpid\": \"800033\",\\n                \"ncpcode\": null,\\n                \"copyRightObjectID\": \"100089684\",\\n                \"authorizationWay\": \"1\"\\n            },\\n            \"ottEnable\": \"1\",\\n            \"contentMediaType\": {\\n                \"isDrmContent\": false,\\n                \"isPekMultView\": false,\\n                \"isH265\": true,\\n                \"isMultiViewContent\": false,\\n                \"isDolbyContent\": true,\\n                \"isAdvance\": false,\\n                \"is120FPS\": false,\\n                \"is3D\": false,\\n                \"isVRContent\": false,\\n                \"ishx\": false,\\n                \"isSpecialBlest\": false\\n            },\\n            \"vrContentType\": null,\\n            \"dimension\": null,\\n            \"formatOf3D\": null,\\n            \"viewDegree\": null,\\n            \"copyRightObjectID\": \"100089684\",\\n            \"drm\": false\\n        },\\n        \"playBill\": null,\\n        \"auth\": {\\n            \"logined\": false,\\n            \"authResult\": \"FAIL\",\\n            \"resultDesc\": null,\\n            \"member\": null,\\n            \"benefites\": null,\\n            \"authPassDefinitionMap\": null\\n        },\\n        \"urlInfo\": {\\n            \"urlType\": \"trial\",\\n            \"url\": \"http://gslbmgspvod.miguvideo.com/depository_yqv/asset/zhengshi/5102/217/994/5102217994/media/5102217994_5009199724_570.mg001.mp4.m3u8?msisdn=202102241400050f1f7850ca764fd8ae371ff609c10773&mdspid=&spid=800033&netType=0&sid=5500742150&pid=2028600496&timestamp=20210224140005&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=661543514&ParentNodeID=-99&preview=1&playseek=000000-000600&assertID=5500742150&client_ip=221.181.101.37&SecurityKey=20210224140005&mvid=5102217994&mcid=1000&mpid=130000119466&playurlVersion=SJ-A1-0.0.3&userid=&jmhm=&videocodec=h265&encrypt=e08325256f7e7ecfbdd1115c4375c4e9\",\\n            \"mediaType\": \"10\",\\n            \"usageCode\": \"570\",\\n            \"codeRate\": \"800\",\\n            \"mediaSize\": 8868182592,\\n            \"rateDesc\": \"投电视专享（VIP限免）\",\\n            \"contId\": null,\\n            \"rateType\": \"8\",\\n            \"needClothHat\": true,\\n            \"resultCode\": \"200\",\\n            \"videoCoding\": \"h265\",\\n            \"hdCodeType\": \"2\",\\n            \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n            \"trySeeDuration\": \"360\",\\n            \"definitionRightSource\": null,\\n            \"authRightSource\": null,\\n            \"userDolbyPlay\": null,\\n            \"streamCode\": null,\\n            \"sdkPlay\": null,\\n            \"outPutFormat\": \"ts\",\\n            \"mediaHeight\": \"2160\",\\n            \"mediaWidth\": \"3840\",\\n            \"hdEquityInfo\": null\\n        },\\n        \"urlInfos\": [\\n            {\\n                \"urlType\": \"trial\",\\n                \"url\": \"http://gslbmgspvod.miguvideo.com/depository_yqv/asset/zhengshi/5102/217/994/5102217994/media/5102217994_5009199724_570.mg001.mp4.m3u8?msisdn=202102241400050f1f7850ca764fd8ae371ff609c10773&mdspid=&spid=800033&netType=0&sid=5500742150&pid=2028600496&timestamp=20210224140005&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=661543514&ParentNodeID=-99&preview=1&playseek=000000-000600&assertID=5500742150&client_ip=221.181.101.37&SecurityKey=20210224140005&mvid=5102217994&mcid=1000&mpid=130000119466&playurlVersion=SJ-A1-0.0.3&userid=&jmhm=&videocodec=h265&encrypt=e08325256f7e7ecfbdd1115c4375c4e9\",\\n                \"mediaType\": \"10\",\\n                \"usageCode\": \"570\",\\n                \"codeRate\": \"800\",\\n                \"mediaSize\": 8868182592,\\n                \"rateDesc\": \"投电视专享（VIP限免）\",\\n                \"contId\": null,\\n                \"rateType\": \"8\",\\n                \"needClothHat\": true,\\n                \"resultCode\": \"200\",\\n                \"videoCoding\": \"h265\",\\n                \"hdCodeType\": \"2\",\\n                \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n                \"trySeeDuration\": \"360\",\\n                \"definitionRightSource\": null,\\n                \"authRightSource\": null,\\n                \"userDolbyPlay\": null,\\n                \"streamCode\": null,\\n                \"sdkPlay\": null,\\n                \"outPutFormat\": \"ts\",\\n                \"mediaHeight\": \"2160\",\\n                \"mediaWidth\": \"3840\",\\n                \"hdEquityInfo\": null\\n            }\\n        ],\\n        \"mediaFiles\": [\\n            {\\n                \"usageCode\": \"455\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"80\",\\n                \"rateDesc\": \"高清 540P\",\\n                \"needAuth\": false,\\n                \"fileSize\": \"988947697\",\\n                \"rateType\": \"2\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"91\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"160\",\\n                \"rateDesc\": \"超清 720P\",\\n                \"needAuth\": false,\\n                \"fileSize\": \"1971195987\",\\n                \"rateType\": \"3\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"92\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"210\",\\n                \"rateDesc\": \"蓝光 1080P\",\\n                \"needAuth\": true,\\n                \"fileSize\": \"3930526042\",\\n                \"rateType\": \"4\",\\n                \"videoCoding\": \"h264\",\\n                \"hdCodeType\": null,\\n                \"iconImgUrl\": null,\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            },\\n            {\\n                \"usageCode\": \"570\",\\n                \"mediaType\": \"10\",\\n                \"codeRate\": \"800\",\\n                \"rateDesc\": \"投电视专享（VIP限免）\",\\n                \"needAuth\": true,\\n                \"fileSize\": \"8868182592\",\\n                \"rateType\": \"8\",\\n                \"videoCoding\": \"h265\",\\n                \"hdCodeType\": \"2\",\\n                \"iconImgUrl\": \"http://img.cmvideo.cn:8080/publish/noms/2019/10/12/1O1A9R9ED89KP.png\",\\n                \"userDolbyPlay\": null,\\n                \"rateTypeDesc\": null,\\n                \"currentTerminalCanSwitch\": \"1\",\\n                \"ottEnable\": \"1\"\\n            }\\n        ],\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": {},\\n        \"terminal\": {\\n            \"suitAvs2\": \"false\",\\n            \"suitAvs2Desc\": \"本节目采用全新avs2技术标准，部分机型若无法播放，请手动选择其他视频观看\",\\n            \"suitMultiView\": \"false\",\\n            \"suitMultiViewDesc\": \"本节目采用全新多视角技术，部分机型可能无法流畅播放，您可以观看其他精彩内容，敬请谅解\"\\n        },\\n        \"advertInfo\": {\\n            \"isAdvert\": \"3\",\\n            \"toast\": null,\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": null\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": {\\n            \"shortName\": \"-\"\\n        },\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

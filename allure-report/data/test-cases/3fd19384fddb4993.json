@@ -1,0 +1,496 @@
+{
+  "uid" : "3fd19384fddb4993",
+  "name" : "test_play[case4]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "7238b03ede9f6e41718078b84aadc809",
+  "time" : {
+    "start" : 1624177538311,
+    "stop" : 1624177538382,
+    "duration" : 71
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+  "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001EB59A4A550>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\", cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n        response = send_request(\n            method=case[\"method\"],\n            url=case[\"api_url\"],\n            data=case[\"request_data\"])\n    \n        # 将Excel的json转为dict\n        expected = json.loads(case[\"expected\"])\n        logger.info(\"期望结果为{}\".format(expected))\n    \n        # 读取Excel中的jsonpath\n        check_jsonpath_contid = case[\"check_jsonpath_contId\"]\n        check_jsonpath_contname = case[\"check_jsonpath_contName\"]\n        logger.info(\n            \"本次jsonpath请求contId为:{}，contName为{}\".format(\n                check_jsonpath_contid,\n                check_jsonpath_contname))\n    \n        # 对code contId contName 进行断言\n>       assert response.json()[\"code\"] == expected[\"code\"]\nE       AssertionError: assert '400001005' == '400'\nE         - 400\nE         + 400001005\n\ntest_cases\\test_paly.py:69: AssertionError",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1624177538311,
+      "stop" : 1624177538311,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+    "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001EB59A4A550>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\", cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n        response = send_request(\n            method=case[\"method\"],\n            url=case[\"api_url\"],\n            data=case[\"request_data\"])\n    \n        # 将Excel的json转为dict\n        expected = json.loads(case[\"expected\"])\n        logger.info(\"期望结果为{}\".format(expected))\n    \n        # 读取Excel中的jsonpath\n        check_jsonpath_contid = case[\"check_jsonpath_contId\"]\n        check_jsonpath_contname = case[\"check_jsonpath_contName\"]\n        logger.info(\n            \"本次jsonpath请求contId为:{}，contName为{}\".format(\n                check_jsonpath_contid,\n                check_jsonpath_contname))\n    \n        # 对code contId contName 进行断言\n>       assert response.json()[\"code\"] == expected[\"code\"]\nE       AssertionError: assert '400001005' == '400'\nE         - 400\nE         + 400001005\n\ntest_cases\\test_paly.py:69: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2838d094db759db",
+      "name" : "请求地址",
+      "source" : "2838d094db759db.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "846ef557057b728e",
+      "name" : "请求头",
+      "source" : "846ef557057b728e.txt",
+      "type" : "text/plain",
+      "size" : 133
+    }, {
+      "uid" : "76c9c5175f34c099",
+      "name" : "请求方法",
+      "source" : "76c9c5175f34c099.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "ab3c6205b5077f7b",
+      "name" : "请求参数",
+      "source" : "ab3c6205b5077f7b.txt",
+      "type" : "text/plain",
+      "size" : 4
+    }, {
+      "uid" : "9570493abc5265c5",
+      "name" : "反回状态码",
+      "source" : "9570493abc5265c5.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "a6d6675c28a9132a",
+      "name" : "响应结果",
+      "source" : "a6d6675c28a9132a.txt",
+      "type" : "text/plain",
+      "size" : 588
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1624177538386,
+      "stop" : 1624177538386,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "请求播放地址"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-L7B50IS8"
+  }, {
+    "name" : "thread",
+    "value" : "8764-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 5, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': {'rewardable': True, 'setting': {'description': '小礼物走一走，来简书关注我', 'default_amount': 200}, 'total_rewards_count': 0, 'reward_buyers': []}, 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "db0c8ecb1d3259b2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624177533235,
+        "stop" : 1624177533295,
+        "duration" : 60
+      }
+    }, {
+      "uid" : "d70e6dd6a1f17546",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624177527996,
+        "stop" : 1624177528042,
+        "duration" : 46
+      }
+    }, {
+      "uid" : "7ae20665d34a684b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624174709970,
+        "stop" : 1624174710010,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "cefe5066311a4b1d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624174303373,
+        "stop" : 1624174303406,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "82f4a36faad1cfd7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624174227242,
+        "stop" : 1624174227279,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "7dcd942ee4a6be27",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1624174197336,
+        "stop" : 1624174197387,
+        "duration" : 51
+      }
+    }, {
+      "uid" : "adc349b6080366d7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623999607226,
+        "stop" : 1623999607289,
+        "duration" : 63
+      }
+    }, {
+      "uid" : "ea8681d6a7f5e557",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623999178844,
+        "stop" : 1623999178892,
+        "duration" : 48
+      }
+    }, {
+      "uid" : "92aaa5814dcf5ec",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623998350850,
+        "stop" : 1623998350903,
+        "duration" : 53
+      }
+    }, {
+      "uid" : "a755a95a04fb2cec",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623998196230,
+        "stop" : 1623998196279,
+        "duration" : 49
+      }
+    }, {
+      "uid" : "a5a118b1153c8285",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623997986110,
+        "stop" : 1623997986162,
+        "duration" : 52
+      }
+    }, {
+      "uid" : "3d7d99e4651de442",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623997388825,
+        "stop" : 1623997388878,
+        "duration" : 53
+      }
+    }, {
+      "uid" : "6e8e5f2f74470960",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623997134584,
+        "stop" : 1623997134734,
+        "duration" : 150
+      }
+    }, {
+      "uid" : "b482e4fa070f0ee3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623996695615,
+        "stop" : 1623996695673,
+        "duration" : 58
+      }
+    }, {
+      "uid" : "f9ec08679e920abb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623927999980,
+        "stop" : 1623928000047,
+        "duration" : 67
+      }
+    }, {
+      "uid" : "60c15a5b72cd4e46",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623927871065,
+        "stop" : 1623927871121,
+        "duration" : 56
+      }
+    }, {
+      "uid" : "ad5910d61aa0c149",
+      "status" : "broken",
+      "statusDetails" : "TypeError: dumps() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given",
+      "time" : {
+        "start" : 1623927317492,
+        "stop" : 1623927317516,
+        "duration" : 24
+      }
+    }, {
+      "uid" : "2dc18ac11430335f",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623927184821,
+        "stop" : 1623927184850,
+        "duration" : 29
+      }
+    }, {
+      "uid" : "c01095ee16c6ffaa",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623927071068,
+        "stop" : 1623927071094,
+        "duration" : 26
+      }
+    }, {
+      "uid" : "a59fd75739eac31e",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'dict' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623927045380,
+        "stop" : 1623927045414,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "6fe7a715f2a15592",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623926947980,
+        "stop" : 1623926948012,
+        "duration" : 32
+      }
+    }, {
+      "uid" : "f50cac087c6d10d2",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'int' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623926883717,
+        "stop" : 1623926883750,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "504c2ecb323205b3",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926780601,
+        "stop" : 1623926780635,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "52c52bac4602b89e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'NoneType'",
+      "time" : {
+        "start" : 1623926719101,
+        "stop" : 1623926719134,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "5a77c1b83b2e722b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'NoneType'",
+      "time" : {
+        "start" : 1623926625195,
+        "stop" : 1623926625228,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "163f050952f77bc8",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'NoneType'",
+      "time" : {
+        "start" : 1623926463584,
+        "stop" : 1623926463614,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "1d4c60e2b91c2e0d",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926335369,
+        "stop" : 1623926335370,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "cc54e17b5a556c8d",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926280215,
+        "stop" : 1623926280216,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "934c11f571d78654",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926253636,
+        "stop" : 1623926253638,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "f0d1b916e597b583",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623926130991,
+        "stop" : 1623926130993,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "df520cb1fe5e2591",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925918179,
+        "stop" : 1623925918181,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "84d59f5ccdd6c6f6",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925811074,
+        "stop" : 1623925811075,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "ef3f3eb70992fc16",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925447955,
+        "stop" : 1623925447957,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "ea2bf221eb592369",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925138952,
+        "stop" : 1623925138984,
+        "duration" : 32
+      }
+    }, {
+      "uid" : "df450c274724c492",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925050208,
+        "stop" : 1623925050210,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "d828614929f536cf",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623924865430,
+        "stop" : 1623924865433,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "e2941237c4e0cec6",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623923652679,
+        "stop" : 1623923652716,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "28bbd4ab9bcbcedb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623920977120,
+        "stop" : 1623920977150,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "2624979e8df86c7e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '400001005' == '400'\n  - 400\n  + 400001005",
+      "time" : {
+        "start" : 1623919443972,
+        "stop" : 1623919444015,
+        "duration" : 43
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3fd19384fddb4993.json",
+  "parameterValues" : [ "{'id': 5, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': {'rewardable': True, 'setting': {'description': '小礼物走一走，来简书关注我', 'default_amount': 200}, 'total_rewards_count': 0, 'reward_buyers': []}, 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

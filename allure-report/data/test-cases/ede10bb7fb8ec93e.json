@@ -1,0 +1,471 @@
+{
+  "uid" : "ede10bb7fb8ec93e",
+  "name" : "test_play[case1]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "9ac44b3fb195a2ae7e88e08d908faa98",
+  "time" : {
+    "start" : 1624177527842,
+    "stop" : 1624177527877,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1624177527646,
+      "stop" : 1624177527646,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "333603df7017365b",
+      "name" : "请求地址",
+      "source" : "333603df7017365b.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "c93ec1b905beedd5",
+      "name" : "请求头",
+      "source" : "c93ec1b905beedd5.txt",
+      "type" : "text/plain",
+      "size" : 133
+    }, {
+      "uid" : "ea55434571896fe7",
+      "name" : "请求方法",
+      "source" : "ea55434571896fe7.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "442b3d90508d340e",
+      "name" : "请求参数",
+      "source" : "442b3d90508d340e.txt",
+      "type" : "text/plain",
+      "size" : 42
+    }, {
+      "uid" : "9f455d0690dbc9a",
+      "name" : "反回状态码",
+      "source" : "9f455d0690dbc9a.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "4ab190df354f5c88",
+      "name" : "响应结果",
+      "source" : "4ab190df354f5c88.txt",
+      "type" : "text/plain",
+      "size" : 597
+    }, {
+      "uid" : "db6b2224a4ebf340",
+      "name" : "第一次断言",
+      "source" : "db6b2224a4ebf340.txt",
+      "type" : "text/plain",
+      "size" : 8
+    }, {
+      "uid" : "5d3de99609e1734d",
+      "name" : "第二次断言",
+      "source" : "5d3de99609e1734d.txt",
+      "type" : "text/plain",
+      "size" : 10
+    }, {
+      "uid" : "90abede8dda68d11",
+      "name" : "第二次断言",
+      "source" : "90abede8dda68d11.txt",
+      "type" : "text/plain",
+      "size" : 14
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1624177528230,
+      "stop" : 1624177528230,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "请求播放地址"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-L7B50IS8"
+  }, {
+    "name" : "thread",
+    "value" : "8764-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 2, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=123456&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "629680a661509be0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174709800,
+        "stop" : 1624174709849,
+        "duration" : 49
+      }
+    }, {
+      "uid" : "237906c30d233ac7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174303221,
+        "stop" : 1624174303272,
+        "duration" : 51
+      }
+    }, {
+      "uid" : "8eed0908233376b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174227092,
+        "stop" : 1624174227144,
+        "duration" : 52
+      }
+    }, {
+      "uid" : "dc76d51c471c23ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624174197198,
+        "stop" : 1624174197245,
+        "duration" : 47
+      }
+    }, {
+      "uid" : "d72c96c5b3f7b166",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623999607065,
+        "stop" : 1623999607117,
+        "duration" : 52
+      }
+    }, {
+      "uid" : "99978b6dc0935222",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'bool'",
+      "time" : {
+        "start" : 1623999178600,
+        "stop" : 1623999178650,
+        "duration" : 50
+      }
+    }, {
+      "uid" : "8cfa6242c55da9ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623998350649,
+        "stop" : 1623998350708,
+        "duration" : 59
+      }
+    }, {
+      "uid" : "18f67fdd4518c142",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623998196042,
+        "stop" : 1623998196096,
+        "duration" : 54
+      }
+    }, {
+      "uid" : "409b8bba54664d3d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997985952,
+        "stop" : 1623997986009,
+        "duration" : 57
+      }
+    }, {
+      "uid" : "8e4ad9581d211b1f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997388580,
+        "stop" : 1623997388699,
+        "duration" : 119
+      }
+    }, {
+      "uid" : "42899b8916ca156c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623997134314,
+        "stop" : 1623997134364,
+        "duration" : 50
+      }
+    }, {
+      "uid" : "809041d31e00ed11",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623996695471,
+        "stop" : 1623996695521,
+        "duration" : 50
+      }
+    }, {
+      "uid" : "ebc648c6ebbf54c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623927999826,
+        "stop" : 1623927999882,
+        "duration" : 56
+      }
+    }, {
+      "uid" : "a2d074b637d680a3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623927870920,
+        "stop" : 1623927870979,
+        "duration" : 59
+      }
+    }, {
+      "uid" : "fb7c2cccf4ecaccf",
+      "status" : "broken",
+      "statusDetails" : "TypeError: dumps() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given",
+      "time" : {
+        "start" : 1623927317304,
+        "stop" : 1623927317383,
+        "duration" : 79
+      }
+    }, {
+      "uid" : "2a036f1cc458a5b2",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623927184517,
+        "stop" : 1623927184548,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "ce2ba677b5ef49d5",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623927070711,
+        "stop" : 1623927070753,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "92c422199c70def3",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'dict' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623927045250,
+        "stop" : 1623927045285,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "9e2588e556f60052",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623926947850,
+        "stop" : 1623926947889,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "b162cdacd8e098a9",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'int' object has no attribute 'encode'",
+      "time" : {
+        "start" : 1623926883471,
+        "stop" : 1623926883600,
+        "duration" : 129
+      }
+    }, {
+      "uid" : "b9b13d6fcad92f7",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926780321,
+        "stop" : 1623926780350,
+        "duration" : 29
+      }
+    }, {
+      "uid" : "847aac702a5c54fa",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926718775,
+        "stop" : 1623926718808,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "be6a70118aa2418f",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926624883,
+        "stop" : 1623926624928,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "6a2b5c74b57ef7f1",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'int'",
+      "time" : {
+        "start" : 1623926463308,
+        "stop" : 1623926463333,
+        "duration" : 25
+      }
+    }, {
+      "uid" : "10ffaba58216ca3a",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926335156,
+        "stop" : 1623926335158,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "ac3c45757bc53396",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926279981,
+        "stop" : 1623926279982,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "6abbbfef59311e6d",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623926253449,
+        "stop" : 1623926253450,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "3ef85659d4cc8837",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'type'",
+      "time" : {
+        "start" : 1623926130805,
+        "stop" : 1623926130806,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "3494aa1044079e7c",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925917929,
+        "stop" : 1623925917930,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "13418ddd6dca6fd4",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925810883,
+        "stop" : 1623925810884,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "9de43224deb63545",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925447772,
+        "stop" : 1623925447773,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "e6d8c4df7df87412",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925138644,
+        "stop" : 1623925138678,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "446d18d56f56922b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623925050027,
+        "stop" : 1623925050028,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "29f8f0bcfc33e8ad",
+      "status" : "broken",
+      "statusDetails" : "TypeError: a bytes-like object is required, not 'dict'",
+      "time" : {
+        "start" : 1623924865208,
+        "stop" : 1623924865211,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "bfcc722a8270c195",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623923652427,
+        "stop" : 1623923652555,
+        "duration" : 128
+      }
+    }, {
+      "uid" : "51ef610f4af526cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623920977025,
+        "stop" : 1623920977050,
+        "duration" : 25
+      }
+    }, {
+      "uid" : "ef9909f2d54e690f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1623919443852,
+        "stop" : 1623919443888,
+        "duration" : 36
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ede10bb7fb8ec93e.json",
+  "parameterValues" : [ "{'id': 2, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=123456&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

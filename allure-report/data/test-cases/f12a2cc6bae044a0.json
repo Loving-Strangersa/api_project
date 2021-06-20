@@ -1,0 +1,114 @@
+{
+  "uid" : "f12a2cc6bae044a0",
+  "name" : "test_play[case3]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "7947cbb826c40e37f7373ed1ecb02a43",
+  "time" : {
+    "start" : 1623923652616,
+    "stop" : 1623923652673,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4852ffc4152670da",
+      "name" : "请求头",
+      "source" : "4852ffc4152670da.txt",
+      "type" : "text/plain",
+      "size" : 145
+    }, {
+      "uid" : "36c03c1c8821fc2",
+      "name" : "请求方法",
+      "source" : "36c03c1c8821fc2.txt",
+      "type" : "text/plain",
+      "size" : 18
+    }, {
+      "uid" : "a330fe7c4ad7e745",
+      "name" : "请求路径",
+      "source" : "a330fe7c4ad7e745.txt",
+      "type" : "text/plain",
+      "size" : 62
+    }, {
+      "uid" : "320d239158a7f16",
+      "name" : "请求参数",
+      "source" : "320d239158a7f16.txt",
+      "type" : "text/plain",
+      "size" : 57
+    }, {
+      "uid" : "507116de8cd87b40",
+      "name" : "a329997d-205d-4325-bd51-2b462176566c-attachment.attach",
+      "source" : "507116de8cd87b40.attach",
+      "type" : "text/plain",
+      "size" : 21
+    }, {
+      "uid" : "28fe9e6df38ed26b",
+      "name" : "9791770b-1438-4991-9a11-c57949e94832-attachment.attach",
+      "source" : "28fe9e6df38ed26b.attach",
+      "type" : "text/plain",
+      "size" : 31
+    }, {
+      "uid" : "23a14cfa57eb792d",
+      "name" : "7d4b22ef-23b6-4477-a634-c1a8290a96f9-attachment.attach",
+      "source" : "23a14cfa57eb792d.attach",
+      "type" : "text/plain",
+      "size" : 21
+    }, {
+      "uid" : "e80c014df5f4ddad",
+      "name" : "4d61a8dd-87ca-468f-be84-ccd722e81ec7-attachment.attach",
+      "source" : "e80c014df5f4ddad.attach",
+      "type" : "text/plain",
+      "size" : 31
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 8,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V4MS4DA"
+  }, {
+    "name" : "thread",
+    "value" : "26512-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 4, 'title': '请求contId为中文\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=节目&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400001005\",\\n    \"rid\": \"BAD_REQUEST_PARAMETER\",\\n    \"playCode\": \"100005\",\\n    \"respId\": \"608676e3c14f39012068c23175ca5fc8_VERQirplDfpbNkGnXZ+0fg==\",\\n    \"info\": null,\\n    \"message\": \"错误的请求参数\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221934908,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f12a2cc6bae044a0.json",
+  "parameterValues" : [ "{'id': 4, 'title': '请求contId为中文\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=节目&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400001005\",\\n    \"rid\": \"BAD_REQUEST_PARAMETER\",\\n    \"playCode\": \"100005\",\\n    \"respId\": \"608676e3c14f39012068c23175ca5fc8_VERQirplDfpbNkGnXZ+0fg==\",\\n    \"info\": null,\\n    \"message\": \"错误的请求参数\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221934908,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

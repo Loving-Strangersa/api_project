@@ -1,58 +1,69 @@
 # -*- coding: utf-8 -*-
+# @Time    : 2021/1/17 15:14
+# @Author  : chron
+# @FileName: handle_excel.py
+# @Software: PyCharm
+# @E-mail  : chron@foxmil.com
+
 import json
+
 import openpyxl
 from common.project_path import DATA_DIR
-from common.handle_logger import logger
+
+"""测试用例数据的封装"""
 
 
 class Excel(object):
 
-    """读取测试用例数据,[{},{},{}...]"""
-
     excel_path = DATA_DIR
 
-    def __init__(self, sheet_name, file_path=excel_path):
-        self.boot = openpyxl.load_workbook(file_path)
-        self.sheet = self.boot[sheet_name]
+    def __init__(self, sheet_name, file_path=excel_path) -> str:
+        self.book = openpyxl.load_workbook(file_path)
+        self.sheet = self.book[sheet_name]
 
     def read_tile(self):
         """
-        :return: 获取表头信息,list
+        :return: 获取表头信息
         """
-        title = []
+        tile = []
         for i in list(self.sheet.rows)[0]:
-            title.append(i.value)
-        return title
+            tile.append(i.value)
+        return tile
 
     def read_all_data(self):
         """
-        :return: [{}，{}，{}...]
+        :return: 按行读取所有测试数据
         """
         all_data = []
 
-        titles = self.read_tile()
+        tile = self.read_tile()
 
         for item in list(self.sheet.rows)[1:]:
-            # 获取每一行数据
             values = []
-            for value in item:
-                values.append(value.value)
-            response = dict(zip(titles, values))
+            for i in item:
+                values.append(i.value)
+            response = dict(zip(tile, values))
             try:
-                response["response"] = json.loads(response["request_data"])
+                response['request_data'] = json.loads(response['request_data'])
             except json.JSONDecodeError:
-                logger.info(
-                    "{}工作表，第{}条用例请求非json类型".format(
-                        self.sheet.title,
-                        response["id"]))
-            all_data.append(response)
+                pass
+            except TypeError:
+                pass
 
+            all_data.append(response)
+        self.book.close()
         return all_data
 
-    def coles_file(self):
-        """关闭excel释放内存"""
-        self.boot.close()
+    def read_one_data(self, row) -> int:
+        """
+        row:传入读取Excel中id的行数
+        return:返回指定行数数据
+        """
+        return self.read_all_data()[row - 1]
 
 
 if __name__ == '__main__':
-    print(Excel("播放").read_all_data())
+    excle = Excel('播放')
+    cases = excle.read_all_data()
+    # print(cases[4]["request_data"]
+    print(excle.read_one_data(5))

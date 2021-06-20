@@ -1,0 +1,4 @@
+.side-nav__brand {
+  background: url('123.png') no-repeat left center;
+  margin-left: 10px;
+}

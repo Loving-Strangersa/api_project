@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2021/1/17 06:45
+# @Author  : chron
+# @FileName: handle_excel.py
+# @Software: PyCharm
+# @E-mail  : chron@foxmil.com
+
 import random
 from common.handle_db import HandleDB
 
@@ -25,11 +32,11 @@ def __get_phone():
 def new_phone():
     db = HandleDB()
     while True:
-        # 生成的手机号
+
         phone = __get_phone()
         # 校验数据库
         count = db.get_sql("select * from member where mobile_phone={}".format(phone))
-        if count == 0:  # 如果数据库查询数据为0，表示没有注册过手机号
+        if count == 0:
             db.close()
             return phone
 

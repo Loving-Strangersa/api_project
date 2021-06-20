@@ -1,0 +1,1 @@
+contId=123456&ott=true&rateType=&ott=false

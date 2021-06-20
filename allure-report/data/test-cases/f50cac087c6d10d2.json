@@ -1,0 +1,88 @@
+{
+  "uid" : "f50cac087c6d10d2",
+  "name" : "test_play[case4]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "7238b03ede9f6e41718078b84aadc809",
+  "time" : {
+    "start" : 1623926883717,
+    "stop" : 1623926883750,
+    "duration" : 33
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'int' object has no attribute 'encode'",
+  "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001EBDD5F2820>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n>       response = send_request(method=case[\"method\"], url=case[\"api_url\"], data=case[\"request_data\"])\n\ntest_cases\\test_paly.py:54: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nmethod = 'get', url = 'http://pc.miguvideo.com/playurl/v3/play/playurl'\ndata = None, token = None\n\n    def send_request(method, url, data=None, token=None):\n        headers = __hand_header(token)\n        url = __get_url(url)\n        data = __get_json_data(data)\n    \n        # 配合proxies，开启fiddler抓包\n        if method.upper() == 'GET':\n            # verify 是否验证服务器的SSL证书\n            # proxies 开启代理调试\n            response = requests.get(url, params=data, headers=headers, verify=False, proxies=None)\n    \n        elif method.upper() == 'POST':\n            response = requests.post(url, json=data, headers=headers, verify=False, proxies=None)\n    \n        logger.info('响应状态码为:{}'.format(response.status_code))\n        # 不是json数据则报错,待优化\n        logger.info('响应内容为:{}'.format(response.json()))\n    \n        # allure\n        # debug = {'http': 'http://localhost:8888', 'https': 'http://localhost:8888'}\n        allure.attach(method.encode(encoding=\"utf-8\",errors=\"strict\"), \"请求方法\", allure.attachment_type.TEXT)\n        allure.attach(str(url), \"请求路径\", allure.attachment_type.TEXT)\n        allure.attach(str(data), \"请求参数\", allure.attachment_type.TEXT)\n>       allure.attach(response.status_code.encode(encoding=\"utf-8\",errors=\"strict\"), \"反回状态码\", allure.attachment_type.TEXT)\nE       AttributeError: 'int' object has no attribute 'encode'\n\ncommon\\handle_request.py:87: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'int' object has no attribute 'encode'",
+    "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001EBDD5F2820>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n>       response = send_request(method=case[\"method\"], url=case[\"api_url\"], data=case[\"request_data\"])\n\ntest_cases\\test_paly.py:54: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nmethod = 'get', url = 'http://pc.miguvideo.com/playurl/v3/play/playurl'\ndata = None, token = None\n\n    def send_request(method, url, data=None, token=None):\n        headers = __hand_header(token)\n        url = __get_url(url)\n        data = __get_json_data(data)\n    \n        # 配合proxies，开启fiddler抓包\n        if method.upper() == 'GET':\n            # verify 是否验证服务器的SSL证书\n            # proxies 开启代理调试\n            response = requests.get(url, params=data, headers=headers, verify=False, proxies=None)\n    \n        elif method.upper() == 'POST':\n            response = requests.post(url, json=data, headers=headers, verify=False, proxies=None)\n    \n        logger.info('响应状态码为:{}'.format(response.status_code))\n        # 不是json数据则报错,待优化\n        logger.info('响应内容为:{}'.format(response.json()))\n    \n        # allure\n        # debug = {'http': 'http://localhost:8888', 'https': 'http://localhost:8888'}\n        allure.attach(method.encode(encoding=\"utf-8\",errors=\"strict\"), \"请求方法\", allure.attachment_type.TEXT)\n        allure.attach(str(url), \"请求路径\", allure.attachment_type.TEXT)\n        allure.attach(str(data), \"请求参数\", allure.attachment_type.TEXT)\n>       allure.attach(response.status_code.encode(encoding=\"utf-8\",errors=\"strict\"), \"反回状态码\", allure.attachment_type.TEXT)\nE       AttributeError: 'int' object has no attribute 'encode'\n\ncommon\\handle_request.py:87: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e5d864c9e7e41880",
+      "name" : "请求方法",
+      "source" : "e5d864c9e7e41880.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "2b87215f3f7f400b",
+      "name" : "请求路径",
+      "source" : "2b87215f3f7f400b.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "9917b3cfb9d9e7f6",
+      "name" : "请求参数",
+      "source" : "9917b3cfb9d9e7f6.txt",
+      "type" : "text/plain",
+      "size" : 4
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V4MS4DA"
+  }, {
+    "name" : "thread",
+    "value" : "12844-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 5, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': {'rewardable': True, 'setting': {'description': '小礼物走一走，来简书关注我', 'default_amount': 200}, 'total_rewards_count': 0, 'reward_buyers': []}, 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f50cac087c6d10d2.json",
+  "parameterValues" : [ "{'id': 5, 'title': '请求contId为123456\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': {'rewardable': True, 'setting': {'description': '小礼物走一走，来简书关注我', 'default_amount': 200}, 'total_rewards_count': 0, 'reward_buyers': []}, 'expected': '{\\n    \"code\": \"400\",\\n    \"rid\": \"PROGRAM_OFFLINE\",\\n    \"playCode\": \"404001002\",\\n    \"respId\": \"bcd2fefeec5eacd75810f40f40dfabe2_DjKuJA7M0P7Esdmb78O3ww==\",\\n    \"info\": null,\\n    \"message\": \"节目已下线，请尝试其他节目\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221774968,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}

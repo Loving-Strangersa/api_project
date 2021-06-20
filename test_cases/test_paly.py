@@ -5,48 +5,42 @@
 # @Software: PyCharm
 # @E-mail  : chron@foxmil.com
 import json
-import os
-import unittest
+import pytest
 import jsonpath
 
 import ddt
+import allure
 
 from common.handle_EnvData import clear_data
 from common.handle_excel import Excel
 from common.handle_logger import logger
 from common.handle_request import send_request
-from common.project_path import DATA_DIR
 
 """
 请求播放接口
 """
 
 # 读取Excel文件数据
-s = Excel(file_path=os.path.join(DATA_DIR, "api_cases.xlsx"), sheet_name="播放")
-cases = s.read_all_datas()
-s.coles_file()
+s = Excel("播放")
+cases = s.read_all_data()
 
-
-# 遍历数据
-# for i in cases:
-#     print(cases)
-
+@allure.feature("请求播放地址")
 @ddt.ddt()
-class play_test(unittest.TestCase):
+class Test_paly (object):
 
     # 设置前置
     @classmethod
-    def tearDown(self) -> None:
+    def setup_class(cls):
         logger.info("===== 开始测试 =====")
         # 清理EnvData类中可能设置的属性
         clear_data()
 
     # 设置后置
     @classmethod
-    def tearDownClass(cls) -> None:
+    def teardown_class(cls):
         logger.info("===== 结束测试 =====")
 
-    @ddt.data(*cases)
+    @pytest.mark.parametrize("case", cases)
     def test_play(self, case):
         logger.info("用例开始执行,用例{}:{}".format(case["id"], case["title"]))
 
@@ -54,7 +48,10 @@ class play_test(unittest.TestCase):
         # case = replace_mark_with_data(cases,"#contId#","661543514")
 
         # 发起请求
-        response = send_request(method=case["method"], url=case["api_url"], data=case["request_data"])
+        response = send_request(
+            method=case["method"],
+            url=case["api_url"],
+            data=case["request_data"])
 
         # 将Excel的json转为dict
         expected = json.loads(case["expected"])
@@ -63,15 +60,32 @@ class play_test(unittest.TestCase):
         # 读取Excel中的jsonpath
         check_jsonpath_contid = case["check_jsonpath_contId"]
         check_jsonpath_contname = case["check_jsonpath_contName"]
-        logger.info("本次jsonpath请求contId为:{}，contName为{}".format(check_jsonpath_contid, check_jsonpath_contname))
+        logger.info(
+            "本次jsonpath请求contId为:{}，contName为{}".format(
+                check_jsonpath_contid,
+                check_jsonpath_contname))
 
         # 对code contId contName 进行断言
-        try:
-            self.assertEqual(response.json()["code"], expected["code"])
-            self.assertEqual(jsonpath.jsonpath(response.json(), check_jsonpath_contid),
-                             jsonpath.jsonpath(expected, check_jsonpath_contid))
-            self.assertEqual(jsonpath.jsonpath(response.json(), check_jsonpath_contname),
-                             jsonpath.jsonpath(expected, check_jsonpath_contname))
-        except AssertionError:
-            logger.info("断言失败")
-            raise
+        assert response.json()["code"] == expected["code"]
+        assert jsonpath.jsonpath(
+            response.json(),
+            check_jsonpath_contid) == jsonpath.jsonpath(
+            expected,
+            check_jsonpath_contid)
+        assert jsonpath.jsonpath(
+            response.json(),
+            check_jsonpath_contname) == jsonpath.jsonpath(
+            expected,
+            check_jsonpath_contname)
+
+        allure.attach(f'{response.json ()["code"]}=={expected["code"]}',
+                      "第一次断言",
+                      allure.attachment_type.TEXT)
+        allure.attach(
+            f'{response.json ()["code"]} == {expected["code"]}',
+            "第二次断言",
+            allure.attachment_type.TEXT)
+        allure.attach(
+            f'{jsonpath.jsonpath (response.json (),check_jsonpath_contname )} == {jsonpath.jsonpath ( expected,check_jsonpath_contname )}',
+            "第二次断言",
+            allure.attachment_type.TEXT)

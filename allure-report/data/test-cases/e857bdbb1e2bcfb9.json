@@ -1,0 +1,94 @@
+{
+  "uid" : "e857bdbb1e2bcfb9",
+  "name" : "test_play[case2]",
+  "fullName" : "test_cases.test_paly.Test_paly#test_play",
+  "historyId" : "9f62367f363a065d6a824b4c73184a75",
+  "time" : {
+    "start" : 1623926780409,
+    "stop" : 1623926780439,
+    "duration" : 30
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: a bytes-like object is required, not 'int'",
+  "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001BD370F9250>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n>       response = send_request(method=case[\"method\"], url=case[\"api_url\"], data=case[\"request_data\"])\n\ntest_cases\\test_paly.py:54: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\handle_request.py:87: in send_request\n    allure.attach(int(response.status_code), \"反回状态码\", allure.attachment_type.TEXT)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\_allure.py:179: in __call__\n    plugin_manager.hook.attach_data(body=body, name=name, attachment_type=attachment_type, extension=extension)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\hooks.py:286: in __call__\n    return self._hookexec(self, self.get_hookimpls(), kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:93: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:84: in <lambda>\n    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_pytest\\listener.py:222: in attach_data\n    self.allure_logger.attach_data(uuid4(), body, name=name, attachment_type=attachment_type, extension=extension)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\reporter.py:119: in attach_data\n    plugin_manager.hook.report_attached_data(body=body, file_name=file_name)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\hooks.py:286: in __call__\n    return self._hookexec(self, self.get_hookimpls(), kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:93: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:84: in <lambda>\n    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <allure_commons.logger.AllureFileLogger object at 0x000001BD35CA3F40>\nbody = 200, file_name = 'f5f96e5a-78eb-4209-8869-f4f237aa3ad5-attachment.txt'\n\n    @hookimpl\n    def report_attached_data(self, body, file_name):\n        destination = os.path.join(self._report_dir, file_name)\n        with open(destination, 'wb') as attached_file:\n            if isinstance(body, text_type):\n                attached_file.write(body.encode('utf-8'))\n            else:\n>               attached_file.write(body)\nE               TypeError: a bytes-like object is required, not 'int'\n\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\logger.py:62: TypeError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: a bytes-like object is required, not 'int'",
+    "statusTrace" : "self = <test_cases.test_paly.Test_paly object at 0x000001BD370F9250>\ncase = {'api_url': '/playurl/v3/play/playurl', 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None, ...}\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_play(self, case):\n        logger.info(\"用例开始执行,用例{}:{}\".format(case[\"id\"], case[\"title\"]))\n    \n        # 数据替换,替换Excel中request_data中contId 正则表达式 (?<=contId=).*?(?=&)\n        # case = replace_mark_with_data(cases,\"#contId#\",\"661543514\")\n    \n        # 发起请求\n>       response = send_request(method=case[\"method\"], url=case[\"api_url\"], data=case[\"request_data\"])\n\ntest_cases\\test_paly.py:54: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\handle_request.py:87: in send_request\n    allure.attach(int(response.status_code), \"反回状态码\", allure.attachment_type.TEXT)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\_allure.py:179: in __call__\n    plugin_manager.hook.attach_data(body=body, name=name, attachment_type=attachment_type, extension=extension)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\hooks.py:286: in __call__\n    return self._hookexec(self, self.get_hookimpls(), kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:93: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:84: in <lambda>\n    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_pytest\\listener.py:222: in attach_data\n    self.allure_logger.attach_data(uuid4(), body, name=name, attachment_type=attachment_type, extension=extension)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\reporter.py:119: in attach_data\n    plugin_manager.hook.report_attached_data(body=body, file_name=file_name)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\hooks.py:286: in __call__\n    return self._hookexec(self, self.get_hookimpls(), kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:93: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\.virtualenv\\project_request\\lib\\site-packages\\pluggy\\manager.py:84: in <lambda>\n    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <allure_commons.logger.AllureFileLogger object at 0x000001BD35CA3F40>\nbody = 200, file_name = 'f5f96e5a-78eb-4209-8869-f4f237aa3ad5-attachment.txt'\n\n    @hookimpl\n    def report_attached_data(self, body, file_name):\n        destination = os.path.join(self._report_dir, file_name)\n        with open(destination, 'wb') as attached_file:\n            if isinstance(body, text_type):\n                attached_file.write(body.encode('utf-8'))\n            else:\n>               attached_file.write(body)\nE               TypeError: a bytes-like object is required, not 'int'\n\nC:\\.virtualenv\\project_request\\lib\\site-packages\\allure_commons\\logger.py:62: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3700d8ce38a19de7",
+      "name" : "请求方法",
+      "source" : "3700d8ce38a19de7.txt",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "6c95c78a054f2072",
+      "name" : "请求路径",
+      "source" : "6c95c78a054f2072.txt",
+      "type" : "text/plain",
+      "size" : 47
+    }, {
+      "uid" : "c4f16261a83412f3",
+      "name" : "请求参数",
+      "source" : "c4f16261a83412f3.txt",
+      "type" : "text/plain",
+      "size" : 42
+    }, {
+      "uid" : "1c70b3f17f001924",
+      "name" : "反回状态码",
+      "source" : "1c70b3f17f001924.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_paly"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_paly"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V4MS4DA"
+  }, {
+    "name" : "thread",
+    "value" : "18876-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_paly"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 3, 'title': '请求contId为中文\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=节目&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400001005\",\\n    \"rid\": \"BAD_REQUEST_PARAMETER\",\\n    \"playCode\": \"100005\",\\n    \"respId\": \"608676e3c14f39012068c23175ca5fc8_VERQirplDfpbNkGnXZ+0fg==\",\\n    \"info\": null,\\n    \"message\": \"错误的请求参数\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221934908,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e857bdbb1e2bcfb9.json",
+  "parameterValues" : [ "{'id': 3, 'title': '请求contId为中文\\n非正常节目id', 'method': 'get', 'api_url': '/playurl/v3/play/playurl', 'request_data': 'contId=节目&ott=true&rateType=&ott=false', 'expected': '{\\n    \"code\": \"400001005\",\\n    \"rid\": \"BAD_REQUEST_PARAMETER\",\\n    \"playCode\": \"100005\",\\n    \"respId\": \"608676e3c14f39012068c23175ca5fc8_VERQirplDfpbNkGnXZ+0fg==\",\\n    \"info\": null,\\n    \"message\": \"错误的请求参数\",\\n    \"httpmessage\": null,\\n    \"timeStamp\": 1614221934908,\\n    \"body\": {\\n        \"content\": null,\\n        \"playBill\": null,\\n        \"auth\": null,\\n        \"urlInfo\": null,\\n        \"urlInfos\": null,\\n        \"mediaFiles\": null,\\n        \"degradeRateInfo\": null,\\n        \"priceInfo\": null,\\n        \"clientAction\": null,\\n        \"terminal\": null,\\n        \"advertInfo\": {\\n            \"isAdvert\": \"1\",\\n            \"toast\": \"\",\\n            \"playLengths\": null,\\n            \"reason\": null,\\n            \"source\": \"\"\\n        },\\n        \"startRate\": null,\\n        \"cpinfo\": null,\\n        \"dolbyUrlInfo\": null,\\n        \"gslbCdn\": null\\n    }\\n}', 'check_sql': None, 'check_jsonpath_contId': '$.body.content.contId', 'check_jsonpath_contName': '$.body.content.contName', 'check_re': None}" ]
+}
